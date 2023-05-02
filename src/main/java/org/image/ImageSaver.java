@@ -15,8 +15,6 @@ public class ImageSaver {
 
     private static String originalFileName;
 
-
-
     public static String getOriginalFileName() {
         return originalFileName;
     }
@@ -35,6 +33,7 @@ public class ImageSaver {
                 e.printStackTrace();
             }
         }
+
     }
 
     static void saveImage(BufferedImage image) {
@@ -57,11 +56,6 @@ public class ImageSaver {
                 e.printStackTrace();
             }
         }
-    }
-
-    public static void saveBlackWhiteImage(BufferedImage bwImage, String inputImagePath) throws IOException {
-        String outputImagePath = inputImagePath.substring(0, inputImagePath.lastIndexOf('.')) + "_bw.jpg";
-        ImageIO.write(bwImage, "jpg", new File(outputImagePath));
     }
 
 }
