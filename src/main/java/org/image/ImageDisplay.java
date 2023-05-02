@@ -135,16 +135,7 @@ public class ImageDisplay {
         urlPanel.add(new JLabel("URL:"));
         urlPanel.add(urlField);
 
-        int result = JOptionPane.showConfirmDialog(null, urlPanel, "Enter the URL of the page to be parsed", JOptionPane.OK_CANCEL_OPTION);
-        if (result == JOptionPane.OK_OPTION) {
-            try {
-                URL url = new URL(urlField.getText());
-                // Call the parseUrl method with the entered URL
-                MagnetLinkParser.parseUrl(url.toString());
-            } catch (MalformedURLException e) {
-                JOptionPane.showMessageDialog(null, "Invalid URL. Please enter a valid URL.", "Issue!", JOptionPane.ERROR_MESSAGE);
-            }
-        }
+
     }
 
     /**
