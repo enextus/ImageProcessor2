@@ -65,11 +65,6 @@ public class ImageDisplay {
             changeImageButton.addActionListener(e -> changeImage());
             panel.add(changeImageButton);
 
-            // Add the new button
-            enterUrlButton = new JButton("Enter the URL of the page to be parsed");
-            enterUrlButton.addActionListener(e -> enterUrl());
-            panel.add(enterUrlButton);
-
 
             JPanel centerPanel = new JPanel();
             centerPanel.setLayout(new BorderLayout());
@@ -126,16 +121,6 @@ public class ImageDisplay {
             frame.setLocationRelativeTo(null);
             frame.setVisible(true);
         });
-    }
-
-    // Add a new method to handle the new button's action event
-    private static void enterUrl() {
-        JTextField urlField = new JTextField(30);
-        JPanel urlPanel = new JPanel();
-        urlPanel.add(new JLabel("URL:"));
-        urlPanel.add(urlField);
-
-
     }
 
     /**

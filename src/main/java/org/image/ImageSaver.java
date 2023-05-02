@@ -40,10 +40,11 @@ public class ImageSaver {
 
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setDialogTitle("Save image as");
-        fileChooser.setFileFilter(new FileNameExtensionFilter("PNG Images", "png"));
+        fileChooser.setFileFilter(new FileNameExtensionFilter("JPG Images", "jpg"));
 
+        String imgSuffix = String.valueOf((int) (Math.random() * (99999 - 11111 + 1) + 11111));
         String filenameWithoutExtension = originalFileName.substring(0, originalFileName.lastIndexOf('.'));
-        fileChooser.setSelectedFile(new File(filenameWithoutExtension + "_bw.png"));
+        fileChooser.setSelectedFile(new File(filenameWithoutExtension + imgSuffix + "_bw.jpg"));
 
         int userSelection = fileChooser.showSaveDialog(null);
 
