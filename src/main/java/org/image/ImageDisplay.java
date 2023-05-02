@@ -19,6 +19,11 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import static org.image.App.logSelectedImage;
+
 public class ImageDisplay {
 
     // GUI components
@@ -163,6 +168,7 @@ public class ImageDisplay {
 
                 // Set filename
                 ImageSaver.setOriginalFileName(selectedFile.getName());
+                logSelectedImage(inputImagePath);
 
                 double[] weights1 = {0.35, 0.35, 0.35};
                 double[] weights2 = {0.1, 0.79, 0.11};

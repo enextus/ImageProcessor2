@@ -47,9 +47,8 @@ public class App {
             try {
 
                 String inputImagePath = selectedFile.getCanonicalPath();
-                ImageSaver.setOriginalFileName(selectedFile.getName());
-
                 logSelectedImage(inputImagePath);
+                ImageSaver.setOriginalFileName(selectedFile.getName());
 
                 BufferedImage colorImage = ImageIO.read(new File(inputImagePath));
 
